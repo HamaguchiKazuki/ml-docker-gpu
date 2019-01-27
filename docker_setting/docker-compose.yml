@@ -1,0 +1,12 @@
+version: '2.4'
+
+services:
+  docker_setting:
+    build: .
+    image: tensorflow-gpu-image
+    container_name: tensorflow-gpu
+    ports:
+      - 8888:8888
+    volumes:
+      - ./src:/notebooks/
+    runtime: nvidia
